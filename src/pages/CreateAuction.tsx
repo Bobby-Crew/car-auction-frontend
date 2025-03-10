@@ -87,7 +87,7 @@ const CreateAuction = () => {
 
           console.log("Uploading images for auction:", auction.id);
           const imageResponse = await fetch(
-            `http://localhost:8000/api/auctions/${auction.id}/images/`,
+            `https://car-auction-backend.onrender.com/api/auctions/${auction.id}/images/`,
             {
               method: "POST",
               headers: {
