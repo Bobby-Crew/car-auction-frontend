@@ -23,13 +23,16 @@ const Login = () => {
     e.preventDefault();
     try {
       console.log("🚀 Attempting login with:", formData);
-      const response = await fetch("http://localhost:8000/api/auth/login/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://car-auction-backend.onrender.com/api/auth/login/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
       console.log("📡 Response status:", response.status);
 
       if (response.ok) {
