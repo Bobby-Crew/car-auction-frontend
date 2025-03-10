@@ -32,13 +32,16 @@ const SignUp = () => {
       };
 
       console.log("Sending signup data:", requestBody);
-      const response = await fetch("http://localhost:8000/api/auth/signup/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(requestBody),
-      });
+      const response = await fetch(
+        "https://car-auction-backend.onrender.com/api/auth/signup/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(requestBody),
+        }
+      );
 
       const data = await response.json();
       console.log("Signup response:", data);
