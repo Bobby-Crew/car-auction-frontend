@@ -43,7 +43,9 @@ const BrowseAuctions = () => {
   useEffect(() => {
     const fetchAuctions = async () => {
       try {
-        const response = await fetch("http://localhost:8000/api/auctions/");
+        const response = await fetch(
+          "https://car-auction-backend.onrender.com/api/auctions/"
+        );
         if (response.ok) {
           const data = await response.json();
           const activeAuctions = data.filter((auction: Auction) => {

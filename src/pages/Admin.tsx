@@ -62,7 +62,9 @@ const Admin = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/auth/users/");
+      const response = await fetch(
+        "https://car-auction-backend.onrender.com/api/auth/users/"
+      );
       if (response.ok) {
         const data = await response.json();
         setUsers(data);
@@ -74,7 +76,9 @@ const Admin = () => {
 
   const fetchAuctions = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/auctions/");
+      const response = await fetch(
+        "https://car-auction-backend.onrender.com/api/auctions/"
+      );
       if (response.ok) {
         const data = await response.json();
         setAuctions(data);
@@ -104,7 +108,7 @@ const Admin = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:8000/api/auth/users/${userToDelete.id}/`,
+        `https://car-auction-backend.onrender.com/api/auth/users/${userToDelete.id}/`,
         {
           method: "DELETE",
         }
@@ -130,7 +134,7 @@ const Admin = () => {
     try {
       const token = localStorage.getItem("accessToken");
       const response = await fetch(
-        `http://localhost:8000/api/auctions/${auctionToDelete.id}/`,
+        `https://car-auction-backend.onrender.com/api/auctions/${auctionToDelete.id}/`,
         {
           method: "DELETE",
           headers: {

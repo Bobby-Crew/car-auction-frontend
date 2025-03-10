@@ -55,7 +55,7 @@ const CreateAuction = () => {
 
       // First, create the auction
       const auctionResponse = await fetch(
-        "http://localhost:8000/api/auctions/",
+        "https://car-auction-backend.onrender.com/api/auctions/",
         {
           method: "POST",
           headers: {

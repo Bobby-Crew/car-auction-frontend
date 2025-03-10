@@ -31,7 +31,7 @@ const UserProfile = () => {
     const fetchProfile = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8000/api/auth/profile/${username}/`,
+          `https://car-auction-backend.onrender.com/api/auth/profile/${username}/`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("accessToken")}`,

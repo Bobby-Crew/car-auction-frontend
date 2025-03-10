@@ -20,7 +20,9 @@ const AuctionDetail = () => {
 
   useEffect(() => {
     const fetchAuction = async () => {
-      const response = await fetch(`http://localhost:8000/api/auctions/${id}/`);
+      const response = await fetch(
+        `https://car-auction-backend.onrender.com/api/auctions/${id}/`
+      );
       if (response.ok) {
         const data = await response.json();
         setAuction(data);
