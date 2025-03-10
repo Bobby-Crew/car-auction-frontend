@@ -13,7 +13,7 @@ const BidAuction: React.FC<BidAuctionProps> = ({ auctionId, currentBid }) => {
   const handleBid = async () => {
     const token = localStorage.getItem("accessToken");
     const response = await fetch(
-      `http://localhost:8000/api/auctions/${auctionId}/bid/`,
+      `https://car-auction-backend.onrender.com/api/auctions/${auctionId}/bid/`,
       {
         method: "POST",
         headers: {

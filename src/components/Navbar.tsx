@@ -24,9 +24,12 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/auth/logout/", {
-        method: "POST",
-      });
+      const response = await fetch(
+        "https://car-auction-backend.onrender.com/api/auth/logout/",
+        {
+          method: "POST",
+        }
+      );
       if (response.ok) {
         logout();
         navigate("/");
