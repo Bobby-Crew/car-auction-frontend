@@ -34,8 +34,8 @@ const Home = () => {
     const fetchAuctions = async () => {
       try {
         const url = isLoggedIn
-          ? "http://localhost:8000/api/auctions/?my_auctions=true"
-          : "http://localhost:8000/api/auctions/?featured=true";
+          ? "https://car-auction-backend.onrender.com/api/auctions/?my_auctions=true"
+          : "https://car-auction-backend.onrender.com/api/auctions/?featured=true";
 
         const token = localStorage.getItem("accessToken");
         const headers: HeadersInit = {
@@ -62,7 +62,7 @@ const Home = () => {
   const getImageUrl = (imagePath: string) => {
     if (!imagePath) return "https://source.unsplash.com/random/800x600/?car";
     if (imagePath.startsWith("http")) return imagePath;
-    return `http://localhost:8000${imagePath}`;
+    return `https://car-auction-backend.onrender.com${imagePath}`;
   };
 
   return (

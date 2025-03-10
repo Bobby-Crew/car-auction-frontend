@@ -45,7 +45,7 @@ const SignUp = () => {
 
       if (response.ok) {
         const loginResponse = await fetch(
-          "http://localhost:8000/api/auth/login/",
+          "https://car-auction-backend.onrender.com/api/auth/login/",
           {
             method: "POST",
             headers: {
